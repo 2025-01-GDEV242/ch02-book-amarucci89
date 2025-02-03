@@ -12,6 +12,7 @@ public class Book
     private String author;
     private String title;
     private int pages; // 2.85
+    private String refNumber;
 
     /**
      * Set the author and title fields when this object
@@ -22,7 +23,7 @@ public class Book
         author = bookAuthor;
         title = bookTitle;
         pages = numberOfPages; // 2.85
-        String refNumber = ""; //2.88
+        refNumber = ""; //2.88
         
     }
 
@@ -54,18 +55,28 @@ public class Book
     
     public void printDetails() // 2.87
     {
+        if (refNumber == null) // 2.89
+        {
+            System.out.println("ZZZ"); // Not functional
+        }
+        
+        else
+        {
+            System.out.println("Reference Number: " + refNumber);
+        }
+        
         System.out.println("Title: " + title + ", " + "Author: " + author + 
         ", " + "Pages: " + pages);
         
     }
     
-    public void setRefNumber (String ref) // 2.88
+    public void setRefNumber (String ref) // 2.88 Mutator
     {
-        String refNumber;
+        refNumber = ref; // Assigns value of parameter (ref) to refNumber
     }
     
     public String getRefNumber() // 2.88 Accessor method
     {
-        return refNumber; 
+        return refNumber; // Checks that mutator is functional
     }
 }
