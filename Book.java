@@ -72,7 +72,19 @@ public class Book
     
     public void setRefNumber (String ref) // 2.88 Mutator
     {
-        refNumber = ref; // Assigns value of parameter (ref) to refNumber
+        // 2.90 Not functioning
+        int minLength = 3;
+        
+        if (refNumber.length() >= minLength)
+        {
+            refNumber = ref; // Assigns value of parameter (ref) to refNumber
+        }
+        
+        // else
+        // {
+            // System.out.println("Reference number must be at least
+            // three characters in length.");
+        // }
     }
     
     public String getRefNumber() // 2.88 Accessor method
