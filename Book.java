@@ -61,6 +61,11 @@ public class Book
     
     public void setRefNumber (String ref) // 2.88
     {
+        String refNumber;
     }
     
+    public String getRefNumber() // 2.88 Accessor method
+    {
+        return refNumber; 
+    }
 }
