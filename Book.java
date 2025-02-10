@@ -13,6 +13,7 @@ public class Book
     private String title;
     private int pages; // 2.85
     private String refNumber;
+    private int borrowed; // 2.91
 
     /**
      * Set the author and title fields when this object
@@ -68,6 +69,8 @@ public class Book
         System.out.println("Title: " + title + ", " + "Author: " + author + 
         ", " + "Pages: " + pages);
         
+        System.out.println(title + " has been borrowed " + borrowed + " times.");
+        
     }
     
     public void setRefNumber (String ref) // 2.88 Mutator
@@ -90,5 +93,15 @@ public class Book
     public String getRefNumber() // 2.88 Accessor method
     {
         return refNumber; // Checks that mutator is functional
+    }
+    
+    public int getBorrowed()
+    {
+        return borrowed;
+    }
+    
+    public void borrow()
+    {
+        borrowed = borrowed + 1;
     }
 }
