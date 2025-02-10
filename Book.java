@@ -27,6 +27,7 @@ public class Book
         pages = numberOfPages; // 2.85
         refNumber = ""; //2.88
         this.courseText = isCourseText; // 2.92
+        borrowed = 0; // 2.91 Initialize int value to 0
     }
 
     // Add the methods here ...
@@ -99,7 +100,7 @@ public class Book
     
     public void borrow() // 2.91
     {
-        borrowed = borrowed + 1;
+        this.borrowed = borrowed + 1;
     }
     
     public boolean isCourseText() // 2.92
