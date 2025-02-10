@@ -57,14 +57,14 @@ public class Book
     
     public void printDetails() // 2.87
     {
-        if (refNumber == null) // 2.89
+        if (refNumber.length() > 0) // 2.89
         {
-            System.out.println("ZZZ"); // Not functional
+            System.out.println("Reference Number: " + refNumber);
         }
         
         else
         {
-            System.out.println("Reference Number: " + refNumber);
+            System.out.println("ZZZ");
         }
         
         System.out.println("Title: " + title + ", " + "Author: " + author + 
