@@ -14,18 +14,19 @@ public class Book
     private int pages; // 2.85
     private String refNumber;
     private int borrowed; // 2.91
+    private final boolean courseText; // 2.92
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int numberOfPages)
+    public Book(String bookAuthor, String bookTitle, int numberOfPages, boolean isCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = numberOfPages; // 2.85
         refNumber = ""; //2.88
-        
+        this.courseText = isCourseText; // 2.92
     }
 
     // Add the methods here ...
@@ -69,7 +70,7 @@ public class Book
         System.out.println("Title: " + title + ", " + "Author: " + author + 
         ", " + "Pages: " + pages);
         
-        System.out.println(title + " has been borrowed " + borrowed + " times.");
+        System.out.println(title + " has been borrowed " + borrowed + " times."); // 2.91
         
     }
     
@@ -95,13 +96,18 @@ public class Book
         return refNumber; // Checks that mutator is functional
     }
     
-    public int getBorrowed()
+    public int getBorrowed() // 2.91
     {
         return borrowed;
     }
     
-    public void borrow()
+    public void borrow() // 2.91
     {
         borrowed = borrowed + 1;
+    }
+    
+    public boolean isCourseText() // 2.92
+    {
+        return courseText;
     }
 }
